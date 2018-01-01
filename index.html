@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+	Jethwa, Mittal
+	Class Account #jadrn020
+	Project #4
+	Fall 2017
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bertha's Deluxe Chocolates</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster|Overlock|Satisfy" rel="stylesheet">
+    <script type="text/javascript" src="js/shopping_cart.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body class="home-page">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Bertha's Store</h1>
+            <p>Feed your imagination</p>
+        </div>
+    </div>
+    <nav class="navbar" data-spy="affix" data-offset-top="240" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bertha's Deluxe Chocolates</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order_online.html">Order Online</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" id="cart"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!--
+		<div class="jumbotron main-jumbotron">
+		</div>
+		-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-content-wrapper">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    
+                    <!--
+                    <div class="item active">
+                    	<div class="carousel-img-wrapper">
+                        	<img src="http://jadran.sdsu.edu/~jadrn000/PROJ4_IMAGES/55P99Y43A.jpg" class="carousel-img pull-left" alt="Los Angeles">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h3>Autumn Assortment</h3>
+                                <small>Item #: 55P99Y43A</small>
+                            </div>
+                            <div class="item-details">
+                                <p>From its richly patterned presentation box to the decorative leaf, this gift is exquisite. Nothing but the best will do inside as well. </p>
+                            </div>
+                            <div class="item-footer">
+                                <h4 class="pull-left"><strong>Price: $39.00</strong></h4>
+                                <button class="btn btn-lg btn-default btn-shop pull-right" id="1J94K63Y9" data-price="16.50">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                    	<div class="carousel-img-wrapper">
+                        		<img src="http://jadran.sdsu.edu/~jadrn000/PROJ4_IMAGES/8P39L86W6.jpg" class="carousel-img pull-left" alt="Chicago">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h3>Autumn Assortment</h3>
+                                <small>Item #: 55P99Y43A</small>
+                            </div>
+                            <div class="item-content">
+                                <p>From its richly patterned presentation box to the decorative leaf, this gift is exquisite. Nothing but the best will do inside as well. 12 oz.</p>
+                            </div>
+                            <div class="item-footer">
+                                <h4 class="pull-left"><strong>Price: $39.00</strong></h4>
+                                <button class="btn btn-lg btn-default btn-shop pull-right" id="1J94K63Y9" data-price="16.50">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                    	<div class="carousel-img-wrapper">
+                        		<img src="http://jadran.sdsu.edu/~jadrn000/PROJ4_IMAGES/8G42K77D3.jpg" class="carousel-img pull-left" alt="New york">
+                    	</div>
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h3>Autumn Assortment</h3>
+                                <small>Item #: 55P99Y43A</small>
+                            </div>
+                            <div class="item-content">
+                                <p>From its richly patterned presentation box to the decorative leaf, this gift is exquisite. Nothing but the best will do inside as well. </p>
+                            </div>
+                            <div class="item-footer">
+                                <h4 class="pull-left"><strong>Price: $39.00</strong></h4>
+                                <button class="btn btn-lg btn-default btn-shop pull-right" id="1J94K63Y9" data-price="16.50">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		      <span class="glyphicon glyphicon-chevron-left"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		      <span class="glyphicon glyphicon-chevron-right"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+        </div>
+        <div class="jumbotron quote-jumbotron">
+            <div class="container text-center">
+                <h2>"There is nothing better than a friend,</h2>
+                <h2>Unless it is a friend with chocolate."</h2>
+                <p> - Linda Grayson - </p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Bertha's Deluxe Chocolates. Copyright &copy;2017. All rights reserved.</p>
+        <div>
+        	<ul class="social list-inline">
+                <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+            </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

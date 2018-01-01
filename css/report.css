@@ -1,0 +1,23 @@
+/*
+    Jethwa, Mittal
+    Class Account #jadrn020
+    Project #4
+    Fall 2017
+*/
+th,td {
+    text-align: center;
+    padding: 15px;
+}
+
+th {
+    background-color: #E9E0C6;
+    color: black;
+}
+
+table {
+	margin-left: 20%;
+}
+
+div {
+	margin-left: 25%;
+}

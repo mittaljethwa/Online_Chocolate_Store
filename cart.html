@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+    Jethwa, Mittal
+    Class Account #jadrn020
+    Project #4
+    Fall 2017
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bertha's Deluxe Chocolates | Cart</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster|Overlock|Satisfy" rel="stylesheet">
+    <script type="text/javascript" src="js/shopping_cart.js"></script>
+    <!-- <script type="text/javascript" src="js/products.js"></script> -->
+    <!-- <script type="text/javascript" src="js/process_cart.js"></script> -->
+    <script type="text/javascript" src="js/online_order.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/products.css" />
+    <link rel="stylesheet" type="text/css" href="css/online_order.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bertha's Deluxe Chocolates</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order_online.html">Order Online</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" id="cart"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container wrapper">
+            <h2>Your Shopping Cart</h2>
+            <hr>
+            <div class="cart-body" id="cart-body">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

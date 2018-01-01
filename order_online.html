@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--
+    Jethwa, Mittal
+    Class Account #jadrn020
+    Project #4
+    Fall 2017
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bertha's Deluxe Chocolates | Order Online</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="/vendor/formvalidation/dist/css/formValidation.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster|Overlock|Satisfy" rel="stylesheet">
+    <script type="text/javascript" src="js/shopping_cart.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/products.js"></script>
+    <script type="text/javascript" src="js/online_order.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/products.css" />
+    <link rel="stylesheet" type="text/css" href="css/online_order.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bertha's Deluxe Chocolates</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li class="active"><a href="order_online.html">Order Online</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"  id="cart"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container wrapper">
+            <div>
+                <h4 id="empty-msg" class="text-danger"><span class="glyphicon glyphicon-warning-sign"> </span><strong>No items in your cart. Please add items to your cart to place the order.</strong></h4>
+            </div>
+            <div class="row cart-body" id="form-container">
+                <form class="form-horizontal" method="post" action="">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
+                        <!-- Billing Address -->
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Billing Address</div>
+                            <div class="panel-body">
+                               <form id="bill-form">
+                                <div class="form-group">
+                                    <label class="form-check-label col-md-12">
+                                            <input class="form-check-input" type="checkbox" value="" id="same-address">
+                                            Same as Shipping Address
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-xs-12">
+                                        <strong>First Name:</strong>
+                                        <input type="text" name="bill_first_name" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            First name is required.
+                                        </div>
+                                    </div>
+                                    <div class="span1"></div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <strong>Last Name:</strong>
+                                        <input type="text" name="bill_last_name" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Last name is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Address 1:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="bill_address" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Address 1 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Address 2:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="bill_address2" class="form-control" value="" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>City:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="bill_city" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid city name.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <strong>State:</strong>
+                                        <input type="text" name="bill_state" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid state. Please enter valid 2-digit United States' state code.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Zip / Postal Code:</strong>
+                                        <input type="text" name="bill_zip_code" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid zip code. Please enter valid 5-digit numeric code.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Phone Number:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="bill_phone_number" maxlength="10" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid Phone Number. Please enter valid 10-digit numeric value without country code.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Email Address:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="bill_email_address" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Please enter valid email address.
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
+                        <!--SHIPPING METHOD-->
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Shipping Address</div>
+                            <div class="panel-body">
+                                <form id="ship-form">
+                                <div class="form-group">
+                                    <div class="col-md-6 col-xs-12">
+                                        <strong>First Name:</strong>
+                                        <input type="text" name="ship_first_name" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            First name is required.
+                                        </div>
+                                    </div>
+                                    <div class="span1"></div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <strong>Last Name:</strong>
+                                        <input type="text" name="ship_last_name" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Last name is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Address 1:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="ship_address" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Address is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Address 2:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="ship_address2" class="form-control" value="" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>City:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="ship_city" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid city name.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <strong>State:</strong>
+                                        <input type="text" name="ship_state" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid state. Please enter valid 2-digit United States' state code.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Zip / Postal Code:</strong>
+                                        <input type="text" name="ship_zip_code" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid zip code. Please enter valid 5-digit numeric code.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Phone Number:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="ship_phone_number" maxlength="10" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Invalid Phone Number. Please enter valid 10-digit numeric value without country code.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Email Address:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="ship_email_address" class="form-control" value="" />
+                                        <div class="invalid-feedback">
+                                            Please enter valid email address.
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+
+                        
+                        <!--SHIPPING METHOD END-->
+                        <!--CREDIT CART PAYMENT-->
+                        <div class="panel panel-info" id="payment-panel">
+                            <div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Card Type:</strong></div>
+                                    <div class="col-md-12">
+                                        <select id="cc-type" name="CreditCardType" class="form-control">
+                                            <option value="">Type</option>
+                                            <option value="Visa">Visa</option>
+                                            <option value="MasterCard">MasterCard</option>
+                                            <option value="American Express">American Express</option>
+                                            <option value="Discover">Discover</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select card type.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12"><strong>Credit Card Number:</strong></div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="card_number" maxlength="16" value="" />
+                                        <div class="invalid-feedback">
+                                            Please enter a valid 16-digit numeric value.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6"><strong>Card CVV:</strong>
+                                        <input type="password" class="form-control" name="cvv" maxlength="3" value="" placeholder="XXX" />
+                                        <div class="invalid-feedback">
+                                            Please enter a valid 3-digit numeric code.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Expiration Date</strong>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <select class="form-control" name="exp_month" id="exp_month">
+                                            <option value="">Month</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid month.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <select class="form-control" name="exp_year" id="exp_year">
+                                            <option value="">Year</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid year.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <span>Pay secure using your credit card.</span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <ul class="cards list-inline">
+                                            <li class="visa hand">Visa</li>
+                                            <li class="mastercard hand">MasterCard</li>
+                                            <li class="amex hand">Amex</li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <button type="submit" class="btn btn-lg btn-primary btn-submit-fix" id="place-order">Place Order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--CREDIT CART PAYMENT END-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="confirmation_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Thank you for your order!</h4>
+                </div>
+                <div class="modal-body">
+                    <h5><strong>Order Details</strong></h5>
+                    <div class="row order_details">
+                        <div class="panel panel-default col-md-4">
+                            <div class="panel-heading">Shipping Address</div>
+                            <div class="panel-body">
+                                <address>
+                                    <strong id="ship_name"></strong>
+                                    <br><span id="ship_address"></span>
+                                    <br><span id="ship_address2"></span>
+                                    <br><span id="ship_city"></span>,<span id="ship_state"></span><span id="ship_zip_code"></span>
+                                    <br>
+                                    <abbr title="Phone">P:</abbr> <span id="ship_phone_number"></span>
+                                    <br>
+                                    <abbr title="Email">E:</abbr> <span id="ship_email_address"></span>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="panel panel-default col-md-4">
+                            <div class="panel-heading">Billing Address</div>
+                            <div class="panel-body">
+                                <address>
+                                    <strong id="bill_name"></strong>
+                                    <br><span id="bill_address"></span>
+                                    <br><span id="bill_address2"></span>
+                                    <br><span id="bill_city"></span>,<span id="bill_state"></span><span id="bill_zip_code"></span>
+                                    <br>
+                                    <abbr title="Phone">P:</abbr> <span id="bill_phone_number"></span>
+                                    <br>
+                                    <abbr title="Email">E:</abbr> <span id="bill_email_address"></span>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="panel panel-default col-md-4">
+                            <div class="panel-heading">Payment Details</div>
+                            <div class="panel-body">
+                                <strong id="card_type">Card</strong>
+                                <br>
+                                <p>XXXX XXXX XXXX <span id="cc_number"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_details">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" href="index.html" role="button">Close</a>
+                    <a class="btn btn-primary" href="products.html" role="button">Continue Shopping</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</body>
+
+</html>

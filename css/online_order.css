@@ -1,0 +1,235 @@
+/*
+    Jethwa, Mittal
+    Class Account #jadrn020
+    Project #4
+    Fall 2017
+*/
+
+html,body,.wrapper{
+    background: #f7f7f7;
+}
+
+.wrapper {
+  margin-top: 0px;
+}
+.steps {
+    margin-top: -41px;
+    display: inline-block;
+    float: right;
+    font-size: 16px
+}
+.step {
+    float: left;
+    background: white;
+    padding: 7px 13px;
+    border-radius: 1px;
+    text-align: center;
+    width: 100px;
+    position: relative
+}
+.step_line {
+    margin: 0;
+    width: 0;
+    height: 0;
+    border-left: 16px solid #fff;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    z-index: 1008;
+    position: absolute;
+    left: 99px;
+    top: 1px
+}
+.step_line.backline {
+    border-left: 20px solid #f7f7f7;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    z-index: 1006;
+    position: absolute;
+    left: 99px;
+    top: -3px
+}
+.step_complete {
+    background: #357ebd
+}
+.step_complete a.check-bc, .step_complete a.check-bc:hover,.afix-1,.afix-1:hover{
+    color: #eee;
+}
+.step_line.step_complete {
+    background: 0;
+    border-left: 16px solid #357ebd
+}
+.step_thankyou {
+    float: left;
+    background: white;
+    padding: 7px 13px;
+    border-radius: 1px;
+    text-align: center;
+    width: 100px;
+}
+
+.asterix{
+    background:#f9f9f9 url(../images/red_asterisk.png) no-repeat 98% center !important;
+}
+
+/* images*/
+ol, ul {
+  list-style: none;
+}
+.hand {
+  cursor: pointer;
+  cursor: pointer;
+}
+.cards{
+    padding-left:0;
+}
+.cards li:first-child {
+  margin-left: 8px;
+}
+.cards li {
+  float: left;
+  height: 32px;
+  margin-right: 8px;
+  text-indent: -9999px;
+  width: 51px;
+}
+.cards .visa {
+  background-image: url('../images/visa.jpg');
+}
+.cards .mastercard {
+  background-image: url('../images/master.jpg');
+}
+.cards .amex {
+  background-image: url('../images/amex.jpg');
+}
+.cards li:last-child {
+  margin-right: 0;
+}
+/* images end */
+
+
+
+/*
+ * BOOTSTRAP
+ */
+.container{
+    border: none;
+}
+.panel-footer{
+    background:#fff;
+}
+.btn{
+    border-radius: 1px;
+}
+.btn-sm, .btn-group-sm > .btn{
+    border-radius: 1px;
+}
+.input-sm, .form-horizontal .form-group-sm .form-control{
+    border-radius: 1px;
+}
+
+.panel-info {
+    border-color: #999;
+}
+
+.panel-heading {
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+.panel {
+    border-radius: 1px;
+}
+.panel-info > .panel-heading {
+    color: #eee;
+    border-color: #999;
+}
+.panel-info > .panel-heading {
+    background-image: linear-gradient(to bottom, #555 0px, #888 100%);
+}
+.modal .panel {
+  border: 0px;
+  padding: 0px;
+  font-size: 14px;
+}
+.order_details {
+  margin: 5px;
+}
+.btn-submit-fix {
+  background-image: linear-gradient(to bottom, #555 0px, #888 100%);
+}
+
+hr {
+    border-color: #999 -moz-use-text-color -moz-use-text-color;
+}
+
+.panel-footer {
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-top: 1px solid #999;
+}
+
+.btn-link {
+    color: #888;
+}
+
+hr{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.invalid-feedback {
+  display: none;
+}
+
+#empty-msg {
+  display: none;
+}
+
+#empty-msg .glyphicon.glyphicon-warning-sign {
+  margin-right: 10px;
+}
+
+/** MEDIA QUERIES **/
+@media only screen and (max-width: 989px){
+    .span1{
+        margin-bottom: 15px;
+        clear:both;
+    }
+}
+
+@media only screen and (max-width: 764px){
+    .inverse-1{
+        float:right;
+    }
+}
+
+@media only screen and (max-width: 586px){
+    .cart-titles{
+        display:none;
+    }
+    .panel {
+        margin-bottom: 1px;
+    }
+}
+
+.form-control {
+    border-radius: 1px;
+}
+
+@media only screen and (max-width: 486px){
+    .col-xss-12{
+        width:100%;
+    }
+    .cart-img-show{
+        display: none;
+    }
+    .btn-submit-fix{
+        width:100%;
+    }
+    
+}
+/*
+@media only screen and (max-width: 777px){
+    .container{
+        overflow-x: hidden;
+    }
+}*/

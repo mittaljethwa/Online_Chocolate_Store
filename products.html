@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+	Jethwa, Mittal
+	Class Account #jadrn020
+	Project #4
+	Fall 2017
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bertha's Deluxe Chocolates | Products</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster|Overlock|Satisfy" rel="stylesheet">
+    <script type="text/javascript" src="js/shopping_cart.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/products.js"></script>
+    <script type="text/javascript" src="js/process_cart.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/products.css" />
+</head>
+
+<body class="products-page">
+    <nav class="navbar navbar-fixed-top" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bertha's Deluxe Chocolates</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="products.html">Products</a></li>
+                    <li><a href="order_online.html">Order Online</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" id="cart"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row leftbar">
+            <div class="col-sm-4">
+                <!-- Category -->
+                <div class="single category">
+                    <h3 class="side-title">Category</h3>
+                    <ul class="list-unstyled">
+                    	<li class="active"><a href="#"  id="all_prod" title="">All</a></li>
+                        <li><a href="#"  id="brittle" title="">Brittles and toffies</a></li>
+                        <li><a href="#"  id="dark-choc" title="">Dark Chocolate</a></li>
+                        <li><a href="#"  id="gifts" title="">Gifts</a></li>
+                        <li><a href="#"  id="holiday-assort" title="">Holiday Assortments</a></li>
+                        <li><a href="#"  id="milk-choc" title="">Milk Chocolate</a></li>
+                        <li><a href="#"  id="nuts" title="">Nuts and Chews</a></li>
+                        <li><a href="#"  id="truffles" title="">Truffles</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-8" id="product-details">
+        	</div>
+        </div>
+    </div>
+</body>
+
+</html>
